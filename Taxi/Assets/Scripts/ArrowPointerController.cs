@@ -4,13 +4,49 @@ using UnityEngine;
 
 public class ArrowPointerController : MonoBehaviour
 {
-    public Transform target;
     public float rotationSpeed;
 
-    // Update is called once per frame
+    private GameObject currentPassenger; 
+    private GameObject currentDestination; 
+
     void Update()
     {
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target.position - transform.position),rotationSpeed * Time.deltaTime);
+        //If there is no currentPassander find one
+        if (currentPassenger == null)
+        {
+            FindNewPassenger();
+            //Vector3 direction = (currentPassenger.transform.position - transform.position).normalized;
+        }
+        //If you passenger is spawned so there is currentPassenger waiting, indicate arrow on him
+        if (currentPassenger != null)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(currentPassenger.transform.position - transform.position), rotationSpeed * Time.deltaTime);
+        }
+
+
+        // If there is no destinationpoint in currentdestination find one
+        if (currentDestination == null)
+        {
+            FindNewDestination();
+        }
+        //If you destinationposint is spawned so there is currentdestination waiting, indicate arrow on it
+        if (currentDestination != null)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(currentDestination.transform.position - transform.position), rotationSpeed * Time.deltaTime);
+        }
+        
+    }
+
+    // Finding spawned PassengerObject with proper tag
+    private void FindNewPassenger()
+    {
+        currentPassenger = GameObject.FindGameObjectWithTag("Passenger");
+    }
+
+    // Finding spawned DestinationObject with proper tag
+    private void FindNewDestination()
+    {
+        currentDestination = GameObject.FindGameObjectWithTag("Destination");
     }
 }
 
