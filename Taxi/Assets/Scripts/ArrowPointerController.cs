@@ -11,7 +11,6 @@ public class ArrowPointerController : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(a);
         //If there is no currentPassander find one
         if (currentPassenger == null)
         {
