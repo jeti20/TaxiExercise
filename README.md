@@ -9,3 +9,8 @@
  - Added arrow indicator which shows where player must to go pick up passenger and then the location where he want to go.
  - Tried to added some buildings and env design but decided to focus on mechanics
  - Added main menu with triggers and animations for Credits with tank
+
+
+Images from project (I change them as the project develops)
+![]([https://github.com/jeti20/TaxiExercise/blob/main/Media/1.PNG)
+
