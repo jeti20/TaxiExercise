@@ -6,11 +6,12 @@ public class ArrowPointerController : MonoBehaviour
 {
     public float rotationSpeed;
 
-    private GameObject currentPassenger; 
-    private GameObject currentDestination; 
+    private GameObject currentPassenger;
+    private GameObject currentDestination;
 
     void Update()
     {
+        Debug.Log(a);
         //If there is no currentPassander find one
         if (currentPassenger == null)
         {
@@ -34,7 +35,7 @@ public class ArrowPointerController : MonoBehaviour
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(currentDestination.transform.position - transform.position), rotationSpeed * Time.deltaTime);
         }
-        
+
     }
 
     // Finding spawned PassengerObject with proper tag
