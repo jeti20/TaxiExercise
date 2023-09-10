@@ -12,5 +12,6 @@
 
 
 Images from project (I change them as the project develops)
-![]([https://github.com/jeti20/TaxiExercise/blob/main/Media/1.PNG)
+
+![](https://github.com/jeti20/TaxiExercise/blob/main/Media/1.PNG)
 
