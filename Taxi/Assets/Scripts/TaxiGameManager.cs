@@ -63,16 +63,18 @@ public class TaxiGameManager: MonoBehaviour
     //Taking passenger
     public void OnPlayerTakePassenger()
     {
+        Destroy(currentPassenger);
         SpawnDestination();
         //hasPassenger = true; 
-        Destroy(currentPassenger); 
+        Debug.Log("Wziêcie pasa¿era i spawowanie destynacji");
     }
 
     //Taking Destination 
     public void OnPlayerDeliverPassenger()
     {
-        SpawnPassenger();
         Destroy(currentDestination);
+        SpawnPassenger();
+        Debug.Log("odwiezienie i spawnowanie nowego pasazera");
         //hasPassenger = false; 
     }
 }
