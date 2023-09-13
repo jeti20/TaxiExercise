@@ -27,7 +27,8 @@ public class TaxiGameManager: MonoBehaviour
     public Transform[] destinationSpawnPoints; // destination poi
 
     private GameObject currentPassenger; 
-    private GameObject currentDestination; 
+    private GameObject currentDestination;
+
 
     //private bool hasPassenger; 
 
@@ -47,6 +48,7 @@ public class TaxiGameManager: MonoBehaviour
         // spawning passengerPrefab on Random passenger spawn point
         currentPassenger = Instantiate(passengerPrefab, passengerSpawnPoint.position, Quaternion.identity);
         //hasPassenger = false; 
+        //DistancePlayerObject.Instance.Measure();
     }
 
     //Spawning Destination after taking passenger
@@ -58,6 +60,7 @@ public class TaxiGameManager: MonoBehaviour
 
         //spawning DestinationPrefab on Random Destination spawn point
         currentDestination = Instantiate(destinationPrefab, destinationSpawnPoint.position, Quaternion.identity);
+        
     }
 
     //Taking passenger
@@ -67,14 +70,22 @@ public class TaxiGameManager: MonoBehaviour
         SpawnDestination();
         //hasPassenger = true; 
         Debug.Log("Wziêcie pasa¿era i spawowanie destynacji");
+        DistancePlayerObject.Instance.Measure();
     }
 
-    //Taking Destination 
+    public float earnedDollars;
+    public float allDollars;
+    //Taking Destination. Earning system is baesed on distanction beetwen Passenger and his destination point
     public void OnPlayerDeliverPassenger()
     {
+        
         Destroy(currentDestination);
         SpawnPassenger();
         Debug.Log("odwiezienie i spawnowanie nowego pasazera");
         //hasPassenger = false; 
-    }
+        earnedDollars = 0.1f * DistancePlayerObject.Instance.distance;
+        allDollars += earnedDollars;
+        Debug.Log("Wszystkie dolary: " + allDollars);
+        Debug.Log("Zarobione dolary: " + earnedDollars);
+    } 
 }
