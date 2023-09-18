@@ -19,8 +19,9 @@ public class CarChange : MonoBehaviour
 
     private void SelectCar(int _index)
     {
-        previousButton.interactable = (_index != 0);
-        nextButton.interactable = (_index != transform.childCount-1);
+        previousButton.interactable = (_index != 0); //turnoff button
+        nextButton.interactable = (_index != transform.childCount-1); //turnoff button
+
         for (int i = 0; i < transform.childCount; i++) 
         {
             transform.GetChild(i).gameObject.SetActive(i == _index);

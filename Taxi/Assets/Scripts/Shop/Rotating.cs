@@ -11,7 +11,7 @@ public class Rotating : MonoBehaviour
         // Oblicz k¹t obrotu na podstawie prêdkoœci i czasu od ostatniej klatki.
         float rotationAmount = rotationSpeed * Time.deltaTime;
 
-        // Obróæ cylindra wokó³ jego osi Y (pionowej) o obliczony k¹t.
+        // Obróæ cylider wokó³ jego osi Y (pionowej) o obliczony k¹t.
         transform.Rotate(Vector3.up, rotationAmount);
     }
 }

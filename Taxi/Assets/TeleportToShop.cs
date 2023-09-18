@@ -3,28 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartGameTrigger : MonoBehaviour
+public class TeleportToShop : MonoBehaviour
 {
-    private bool playerInsideTrigger = false; 
+    private bool playerInsideTrigger = false;
     private float insideTriggerTime = 0f; 
 
     private void Update()
     {
+        // checking if player is in trigger
         if (playerInsideTrigger)
         {
             insideTriggerTime += Time.deltaTime;
 
-
-            if (insideTriggerTime >= 1f)
+            // wait for x seconds before 
+            if (insideTriggerTime >= 3f)
             {
-                StartGame(); 
+                
+                LoadShop(); 
             }
         }
     }
 
     private void OnTriggerEnter(Collider other)
-    {
-        // Sprawdü, czy gracz wjecha≥ w trigger
+    {  
         if (other.CompareTag("Player"))
         {
             playerInsideTrigger = true;
@@ -33,6 +34,7 @@ public class StartGameTrigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        //player left the triger, restart the values for timer
         if (other.CompareTag("Player"))
         {
             playerInsideTrigger = false;
@@ -40,8 +42,8 @@ public class StartGameTrigger : MonoBehaviour
         }
     }
 
-    private void StartGame()
+    private void LoadShop()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Shop");
     }
 }
