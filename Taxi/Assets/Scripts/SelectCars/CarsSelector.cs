@@ -6,6 +6,23 @@ public class CarsSelector : MonoBehaviour
 {
     public int currentCarIndex;
     public GameObject[] cars;
+
+    private void Start()
+    {
+        currentCarIndex = PlayerPrefs.GetInt("SelectedCar", 0);
+        foreach (GameObject car in cars) 
+        {
+            car.SetActive(false);
+        }
+
+        cars[currentCarIndex].SetActive(true);
+    }
+
+
+
+    #region Moje
+    /*public int currentCarIndex;
+    public GameObject[] cars;
     public Transform spawnPoint;
 
     private GameObject currentCar; // Aktualnie zrespawnowany samochód
@@ -30,6 +47,6 @@ public class CarsSelector : MonoBehaviour
         // Spawnowanie nowego samochodu na wybranym miejscu
         currentCar = Instantiate(cars[currentCarIndex], spawnPoint.position, Quaternion.identity);
         currentCar.SetActive(true);
-    }
-
+    }*/
+    #endregion
 }

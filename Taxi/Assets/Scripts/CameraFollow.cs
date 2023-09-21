@@ -10,7 +10,29 @@ public class CameraFollow : MonoBehaviour
     public Vector3 moveOffset;
     public Vector3 rotOffset;
 
-    public Transform carTarget;
+    [SerializeField] private Transform carTarget;
+    public string playerTag = "Player";
+
+    private void Start()
+    {
+        Invoke("FindPlayer", 0.01f);
+        
+    }
+
+    private void FindPlayer()
+    {
+        GameObject playerObject = GameObject.FindGameObjectWithTag(playerTag);
+
+        if (playerObject != null)
+        {
+            Transform playerTransform = playerObject.transform;
+            carTarget = playerTransform;
+        }
+        else
+        {
+            Debug.LogError("Nie znaleziono obiektu gracza o tagu: " + playerTag);
+        }
+    }
 
     void FixedUpdate()
     {

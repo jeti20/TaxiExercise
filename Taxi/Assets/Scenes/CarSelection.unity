@@ -182,7 +182,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -1876166254656191779, guid: 70bf34f6c25c948458f254e87188b00b, type: 3}
+    - {fileID: 3404580567184106504, guid: 70bf34f6c25c948458f254e87188b00b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 70bf34f6c25c948458f254e87188b00b, type: 3}
 --- !u!1 &170432145
 GameObject:
@@ -681,11 +683,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 417704, guid: 68840c673a0b18e41a044ed077548d55, type: 3}
   m_PrefabInstance: {fileID: 1831327812}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &671854859 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 104122, guid: aea2a6cdcc9d7944090d528486ebaee1, type: 3}
-  m_PrefabInstance: {fileID: 1662283646}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &671854860 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 489324, guid: aea2a6cdcc9d7944090d528486ebaee1, type: 3}
@@ -892,7 +889,6 @@ MonoBehaviour:
   currentCarIndex: 2
   carModels:
   - {fileID: 643977573}
-  - {fileID: 671854859}
   - {fileID: 1582562597}
   - {fileID: 1558212114}
   - {fileID: 1126347390}
@@ -1213,7 +1209,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 828756569103618826, guid: aea2a6cdcc9d7944090d528486ebaee1, type: 3}
+    - {fileID: -5043550441849549838, guid: aea2a6cdcc9d7944090d528486ebaee1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: aea2a6cdcc9d7944090d528486ebaee1, type: 3}
 --- !u!1 &1702762875
 GameObject:
@@ -1342,7 +1340,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -8849539871273912271, guid: 68840c673a0b18e41a044ed077548d55, type: 3}
+    - {fileID: 7814620795834319975, guid: 68840c673a0b18e41a044ed077548d55, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 68840c673a0b18e41a044ed077548d55, type: 3}
 --- !u!1001 &1912119925
 PrefabInstance:
@@ -1403,7 +1403,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -8046038511553971521, guid: da59e5a3713884d4f9e9667c2befa1a4, type: 3}
+    - {fileID: -3386067488700981283, guid: da59e5a3713884d4f9e9667c2befa1a4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: da59e5a3713884d4f9e9667c2befa1a4, type: 3}
 --- !u!1001 &2010255798
 PrefabInstance:
@@ -1464,7 +1466,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -5737397901064757069, guid: 09082afec7b5e824ca611a0cc3264bcd, type: 3}
+    - {fileID: -331518806157432320, guid: 09082afec7b5e824ca611a0cc3264bcd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 09082afec7b5e824ca611a0cc3264bcd, type: 3}
 --- !u!1 &2023180744
 GameObject:

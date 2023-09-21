@@ -10,7 +10,7 @@ public class ShopManager : MonoBehaviour
 
     private void Start()
     {
-        currentCarIndex = PlayerPrefs.GetInt("SeleectedCar", 0);
+        currentCarIndex = PlayerPrefs.GetInt("SelectedCar", 0);
 
         foreach (GameObject car in carModels)
         {
@@ -31,7 +31,7 @@ public class ShopManager : MonoBehaviour
         }
 
         carModels[currentCarIndex].SetActive(true);
-        currentCarIndex = PlayerPrefs.GetInt("SeleectedCar", currentCarIndex);
+        PlayerPrefs.SetInt("SelectedCar", currentCarIndex);
     }
 
     public void ChangePrevious()
@@ -45,7 +45,7 @@ public class ShopManager : MonoBehaviour
         }
 
         carModels[currentCarIndex].SetActive(true);
-        currentCarIndex = PlayerPrefs.GetInt("SeleectedCar", currentCarIndex);
+        PlayerPrefs.SetInt("SelectedCar", currentCarIndex);
     }
 
 
