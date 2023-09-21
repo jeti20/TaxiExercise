@@ -8,6 +8,8 @@ public class ShopManager : MonoBehaviour
     public int currentCarIndex;
     public GameObject[] carModels;
 
+    [SerializeField] private AudioSource chaneCarSound;
+
     private void Start()
     {
         currentCarIndex = PlayerPrefs.GetInt("SelectedCar", 0);
@@ -32,6 +34,7 @@ public class ShopManager : MonoBehaviour
 
         carModels[currentCarIndex].SetActive(true);
         PlayerPrefs.SetInt("SelectedCar", currentCarIndex);
+        chaneCarSound.Play();
     }
 
     public void ChangePrevious()
@@ -46,6 +49,7 @@ public class ShopManager : MonoBehaviour
 
         carModels[currentCarIndex].SetActive(true);
         PlayerPrefs.SetInt("SelectedCar", currentCarIndex);
+        chaneCarSound.Play();
     }
 
 

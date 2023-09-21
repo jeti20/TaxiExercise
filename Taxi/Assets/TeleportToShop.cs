@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class TeleportToShop : MonoBehaviour
 {
     private bool playerInsideTrigger = false;
-    private float insideTriggerTime = 0f; 
+    private float insideTriggerTime = 0f;
+    [SerializeField] string sceneToLoad;
 
     private void Update()
     {
@@ -44,6 +45,6 @@ public class TeleportToShop : MonoBehaviour
 
     private void LoadShop()
     {
-        SceneManager.LoadScene("Shop");
+        SceneManager.LoadScene(sceneToLoad);
     }
 }

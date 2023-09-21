@@ -1799,6 +1799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba2dbb470d388642a1312a1d523f01e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneToLoad: CarSelection
 --- !u!1001 &1171104903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3066,6 +3067,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7599196640176887760, guid: 1cd516f06f3d89e4484b2776221bf245, type: 3}
+      propertyPath: passengerPrefab
+      value: 
+      objectReference: {fileID: 7975276244814096045, guid: 40620450949d8134389ec62278e8b076, type: 3}
+    - target: {fileID: 7599196640176887760, guid: 1cd516f06f3d89e4484b2776221bf245, type: 3}
+      propertyPath: destinationPrefab
+      value: 
+      objectReference: {fileID: 7975276244814096045, guid: 886b61842b6cfb84e8d92baa43e1198d, type: 3}
     - target: {fileID: 7599196640176887760, guid: 1cd516f06f3d89e4484b2776221bf245, type: 3}
       propertyPath: passengerSpawnPoints.Array.size
       value: 10
