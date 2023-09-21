@@ -26,7 +26,13 @@ public class DistancePlayerObject : MonoBehaviour
 
     private Transform playerTransform; // Transform gracza
 
+
     private void Start()
+    {
+        StartCoroutine(Delay());      
+    }
+
+    private void FindingPlayer()
     {
         // Znajdü gracza na scenie na podstawie tagu
         GameObject playerObject = GameObject.FindGameObjectWithTag(playerTag);
@@ -40,6 +46,12 @@ public class DistancePlayerObject : MonoBehaviour
         {
             Debug.LogError("Nie znaleziono obiektu gracza o tagu: " + playerTag);
         }
+    }
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(1);
+        FindingPlayer();
     }
 
     public float distance;
