@@ -20,9 +20,15 @@
  18.09.2023
  - Added LoadScene to shop
 
+ 21.09.2023
+ - Added new better shop
+ - Changed the prefabs for passenger and destination
+ - Added new cars 
+ - Added audio for buttons
+
 NOTE: I'm aware that it needs more improvements with lighting and shop/earnings system. It is still under development. 
 
-Some gameplay: https://youtu.be/qYKb9-bOnu0
+Some gameplay: https://youtu.be/qYKb9-bOnu0 
 
 ![](https://github.com/jeti20/TaxiExercise/blob/main/Media/1.PNG)
 ![](https://github.com/jeti20/TaxiExercise/blob/main/Media/2.PNG)
