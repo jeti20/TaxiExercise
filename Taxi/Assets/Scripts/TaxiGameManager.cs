@@ -32,7 +32,11 @@ public class TaxiGameManager: MonoBehaviour
 
     //private bool hasPassenger; 
 
-    
+    private void Awake()
+    {
+        allDollars = PlayerPrefs.GetFloat("GlobalDollars", 0);
+    }
+
     void Start()
     {
         SpawnPassenger();
@@ -78,13 +82,15 @@ public class TaxiGameManager: MonoBehaviour
     //Taking Destination. Earning system is baesed on distanction beetwen Passenger and his destination point
     public void OnPlayerDeliverPassenger()
     {
-        
         Destroy(currentDestination);
         SpawnPassenger();
         Debug.Log("odwiezienie i spawnowanie nowego pasazera");
         //hasPassenger = false; 
         earnedDollars = 0.1f * DistancePlayerObject.Instance.distance;
         allDollars += earnedDollars;
+
+        PlayerPrefs.SetFloat("GlobalDollars", allDollars);
+        //PlayerPrefs.SetFloat("GlobaclDollars", allDollars);
         Debug.Log("Wszystkie dolary: " + allDollars);
         Debug.Log("Zarobione dolary: " + earnedDollars);
     } 

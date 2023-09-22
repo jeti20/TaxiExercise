@@ -26,6 +26,9 @@
  - Added new cars 
  - Added audio for buttons
 
+ 22.09.2023
+ - Added complete shop logic
+
 NOTE: I'm aware that it needs more improvements with lighting and shop/earnings system. It is still under development. 
 
 Some gameplay: https://youtu.be/qYKb9-bOnu0 
